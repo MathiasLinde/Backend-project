@@ -7,10 +7,10 @@ file_path = 'product.json'
 x = datetime.datetime.now()
 app = Flask(__name__)
 
-
+@app.route('/data/')
 def get_products():
     json_data = read_json_from_file(file_path)
-    print(json_data)
+    
     return json_data
     
 if __name__ == '__main__':
